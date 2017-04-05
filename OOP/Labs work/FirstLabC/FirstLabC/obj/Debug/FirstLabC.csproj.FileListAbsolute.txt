@@ -1,0 +1,9 @@
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\bin\Debug\FirstLabC.exe.config
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\bin\Debug\FirstLabC.exe
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\bin\Debug\FirstLabC.pdb
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\obj\Debug\FirstLabC.csprojResolveAssemblyReference.cache
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\obj\Debug\FirstLabC.AboutForm.resources
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\obj\Debug\FirstLabC.Properties.Resources.resources
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\obj\Debug\FirstLabC.csproj.GenerateResource.Cache
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\obj\Debug\FirstLabC.exe
+c:\users\xati\documents\visual studio 2017\Projects\FirstLabC\FirstLabC\obj\Debug\FirstLabC.pdb
