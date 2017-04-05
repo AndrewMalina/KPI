@@ -1,0 +1,6 @@
+c:\users\xati\documents\visual studio 2017\Projects\SecondLab .Net\SecondLab .Net\bin\Debug\SecondLab.Net.exe.config
+c:\users\xati\documents\visual studio 2017\Projects\SecondLab .Net\SecondLab .Net\bin\Debug\SecondLab.Net.exe
+c:\users\xati\documents\visual studio 2017\Projects\SecondLab .Net\SecondLab .Net\bin\Debug\SecondLab.Net.pdb
+c:\users\xati\documents\visual studio 2017\Projects\SecondLab .Net\SecondLab .Net\obj\Debug\SecondLab.Net.exe
+c:\users\xati\documents\visual studio 2017\Projects\SecondLab .Net\SecondLab .Net\obj\Debug\SecondLab.Net.pdb
+c:\users\xati\documents\visual studio 2017\Projects\SecondLab .Net\SecondLab .Net\obj\Debug\SecondLab .Net.csprojResolveAssemblyReference.cache
