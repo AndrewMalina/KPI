@@ -3,7 +3,7 @@ package service;
 import models.Ticket;
 
 public interface TicketService {
-    Ticket Buy(Ticket seat, int start, int end, String name, String surname);
+    /*Ticket Buy(Ticket seat, int start, int end, String name, String surname);
     default void getDistance(int start, int end){
 
     }
@@ -20,5 +20,5 @@ public interface TicketService {
             }
             default: ticket.setPrice(0);;
         }
-    }
+    }*/
 }
