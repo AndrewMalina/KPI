@@ -2,8 +2,16 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "train")
 public class Train {
+    @Id
+    @GeneratedValue
     private String id;
     private String name;
     private String type;
@@ -14,36 +22,36 @@ public class Train {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public List<Stop> getStops() {
-        return stops;
-    }
-
-    public List<Seat> getSeats() {
-        return seats;
-    }
-
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getType() {
+        return type;
+    }
+
     public void setType(String type) {
         this.type = type;
     }
 
+    public List<Stop> getStops() {
+        return stops;
+    }
+
     public void setStops(List<Stop> stops) {
         this.stops = stops;
+    }
+
+    public List<Seat> getSeats() {
+        return seats;
     }
 
     public void setSeats(List<Seat> seats) {

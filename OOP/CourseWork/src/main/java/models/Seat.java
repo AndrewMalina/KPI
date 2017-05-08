@@ -1,9 +1,17 @@
 package models;
 
+import com.sun.javafx.beans.IDProperty;
+
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "seat")
 public class Seat {
+    @Id
     private Train train = new Train();
     private int carriage;
     private int number;

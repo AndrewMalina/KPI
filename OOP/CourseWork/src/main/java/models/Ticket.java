@@ -1,6 +1,13 @@
 package models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tickets")
 public class Ticket {
+    @Id
     private Seat seat = new Seat();
     private int start;
     private int end;

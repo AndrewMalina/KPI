@@ -13,18 +13,18 @@ import java.util.Map;
 
 public class Main {
 
-    public static void main(final String[] args) throws Exception {
+    public static void main(String[] args) {
         User user = new User();
         user.setName("Dimosik");
         user.setPassword("PIDOR");
         EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
-//
-//        em.getTransaction().begin();
-//        em.persist(user);
-//        em.getTransaction().commit();
-//        em.close();
 
-//        em = PersistenceManager.INSTANCE.getEntityManager();
+        em.getTransaction().begin();
+        em.persist(user);
+        em.getTransaction().commit();
+        em.close();
+
+        em = PersistenceManager.INSTANCE.getEntityManager();
         User user1 = em.find(User.class, 1L);
         System.out.println(user1);
         PersistenceManager.INSTANCE.close();
