@@ -10,7 +10,7 @@
 
         <properties>
             <!-- Configuring JDBC properties -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:./ticketdb/db" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:./ticketdb" />
             <property name="javax.persistence.jdbc.user" value="root" />
             <property name="javax.persistence.jdbc.password" value="123456" />
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />

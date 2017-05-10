@@ -1,21 +1,25 @@
 package models;
 
 import com.sun.javafx.beans.IDProperty;
+import jdk.nashorn.internal.objects.annotations.Property;
+import org.hibernate.annotations.ForeignKey;
+import org.hibernate.id.ForeignGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "seat")
+@Table(name = "seats")
 public class Seat {
     @Id
+    @ManyToOne()
     private Train train = new Train();
     private int carriage;
     private int number;
+    @OneToMany(targetEntity = Reservation.class , mappedBy = "seat_reservation")
     private List<Reservation> reservations = new ArrayList<Reservation>();
+
 
     public Train getTrain() {
         return train;

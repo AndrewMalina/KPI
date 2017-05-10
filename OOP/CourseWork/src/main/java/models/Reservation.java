@@ -1,9 +1,18 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
+@Entity
+@Table(name = "reservations")
 public class Reservation {
+    @Id
+    @Column(name = "start")
     private int start;
+
+    @Column(name = "name")
     private int end;
 
     public int getStart() {

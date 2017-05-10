@@ -1,19 +1,30 @@
 package models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tickets")
 public class Ticket {
     @Id
+    @ManyToOne ()
     private Seat seat = new Seat();
+
+    @Column(name = "start_ticket")
     private int start;
+
+    @Column(name = "end_ticket")
     private int end;
+
+    @Column(name = "price_ticket")
     private float price;
+
+    @Column(name = "name_ticket")
     private String name;
+
+    @Column(name = "surname_ticket")
     private String surname;
+
+    @Column(name = "distance_key")
     private int distance;
 
     public Seat getSeat() {

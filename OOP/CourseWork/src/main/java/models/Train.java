@@ -1,21 +1,28 @@
 package models;
 
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "train")
+@Table(name = "trains")
 public class Train {
     @Id
     @GeneratedValue
+    @Column(name = "id_train")
     private String id;
+
+    @Column(name = "name_train")
     private String name;
+
+    @Column(name = "type_train")
     private String type;
+
+    @OneToMany(targetEntity = Stop.class, mappedBy = "train_stops")
     private List<Stop> stops = new ArrayList<Stop>();
+
+    @OneToMany(targetEntity = Seat.class ,mappedBy = "train_seats")
     private List<Seat> seats = new ArrayList<Seat>();
 
     public String getId() {
