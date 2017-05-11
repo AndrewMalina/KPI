@@ -14,6 +14,7 @@ import javax.persistence.*;
 public class Seat {
     @Id
     @ManyToOne()
+    @JoinColumn(name = "")
     private Train train = new Train();
     private int carriage;
     private int number;

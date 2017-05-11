@@ -6,7 +6,8 @@ import javax.persistence.*;
 @Table(name = "tickets")
 public class Ticket {
     @Id
-    @ManyToOne ()
+    @ManyToOne
+    @JoinColumn(name = "")
     private Seat seat = new Seat();
 
     @Column(name = "start_ticket")
