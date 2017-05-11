@@ -7,29 +7,23 @@ import javax.persistence.*;
 public class Ticket {
     @Id
     @GeneratedValue
-    @Column(name = "id")
-    private int id;
+    @Column(name = "id_ticket")
+    private Integer id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "id_train")
     private Seat seat;
 
-    @Column(name = "start_ticket")
     private int start;
 
-    @Column(name = "end_ticket")
     private int end;
 
-    @Column(name = "price_ticket")
     private float price;
 
-    @Column(name = "name_ticket")
     private String name;
 
-    @Column(name = "surname_ticket")
     private String surname;
 
-    @Column(name = "distance_key")
     private int distance;
 
     public Seat getSeat() {
@@ -88,16 +82,29 @@ public class Ticket {
         this.distance = distance;
     }
 
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+            "id=" + id +
+            ", seat=" + seat +
+            ", start=" + start +
+            ", end=" + end +
+            ", price=" + price +
+            ", name='" + name + '\'' +
+            ", surname='" + surname + '\'' +
+            ", distance=" + distance +
+            '}';
     }
 }

@@ -1,6 +1,11 @@
 package models;
 
+import org.hibernate.annotations.*;
+
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.List;
 
 @Entity
@@ -8,27 +13,25 @@ import java.util.List;
 public class Seat {
     @Id
     @GeneratedValue
-    @Column("id")
-    private int id;
+    @Column(name = "id_seat")
+    private Integer id;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "id_train")
     private Train train;
 
-    @Column(name = "id_carrige")
     private int carriage;
 
-    @Column(name = "id_number")
     private int number;
 
-    @OneToMany(mappedBy = "id_seat")
+    @OneToMany(mappedBy = "seat", cascade = CascadeType.ALL)
     private List<Reservation> reservations;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -62,5 +65,16 @@ public class Seat {
 
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
+    }
+
+    @Override
+    public String toString() {
+        return "Seat{" +
+            "id=" + id +
+            ", train=" + train +
+            ", carriage=" + carriage +
+            ", number=" + number +
+            ", reservations=" + reservations +
+            '}';
     }
 }

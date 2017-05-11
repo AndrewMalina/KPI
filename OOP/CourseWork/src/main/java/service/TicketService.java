@@ -13,12 +13,9 @@ public interface TicketService {
                  ticket.setPrice(distance / 10);
             }
             case "Day": {
-                ticket.setPrice(distance / 10);
+                ticket.setPrice(distance / 5);
             }
-            case "InterCity":{
-                ticket.setPrice(distance / 10 * 2);
-            }
-            default: ticket.setPrice(0);;
+            default: ticket.setPrice(0);
         }
     }
 }

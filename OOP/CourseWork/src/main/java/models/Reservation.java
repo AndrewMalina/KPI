@@ -7,24 +7,22 @@ import javax.persistence.*;
 public class Reservation {
     @Id
     @GeneratedValue
-    @Column(name = "id")
-    private int id;
+    @Column(name = "id_reservation")
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "id_seat")
     private Seat seat;
 
-    @Column(name = "start")
     private int start;
 
-    @Column(name = "name")
     private int end;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -42,5 +40,23 @@ public class Reservation {
 
     public void setEnd(int end) {
         this.end = end;
+    }
+
+    public Seat getSeat() {
+        return seat;
+    }
+
+    public void setSeat(Seat seat) {
+        this.seat = seat;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+            "id=" + id +
+            ", seat=" + seat +
+            ", start=" + start +
+            ", end=" + end +
+            '}';
     }
 }

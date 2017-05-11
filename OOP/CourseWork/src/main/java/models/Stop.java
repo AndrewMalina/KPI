@@ -1,7 +1,5 @@
 package models;
 
-import com.sun.javafx.beans.IDProperty;
-
 import java.util.Date;
 import javax.persistence.*;
 
@@ -11,16 +9,17 @@ public class Stop {
     @Id
     @GeneratedValue
     @Column(name = "id_stop")
-    private int id;
+    private Integer id;
 
-    @Column(name = "train_id")
-    private int train_id;
-
-    @Column(name = "city_stop")
+    @Column(name = "city")
     private int city;
 
-    @Column(name = "date_stop")
+    @Column(name = "date")
     private Date date;
+
+    @ManyToOne
+    @JoinColumn(name = "id_train")
+    private Train train;
 
     public int getCity() {
         return city;
@@ -36,5 +35,31 @@ public class Stop {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Train getTrain() {
+        return train;
+    }
+
+    public void setTrain(Train train) {
+        this.train = train;
+    }
+
+    @Override
+    public String toString() {
+        return "Stop{" +
+            "id=" + id +
+            ", city=" + city +
+            ", date=" + date +
+            ", train=" + train +
+            '}';
     }
 }

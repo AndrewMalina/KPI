@@ -1,7 +1,11 @@
 package models;
 
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Entity
@@ -10,25 +14,25 @@ public class Train {
     @Id
     @GeneratedValue
     @Column(name = "id_train")
-    private String id;
+    private Integer id;
 
-    @Column(name = "name_train")
     private String name;
 
-    @Column(name = "type_train")
     private String type;
 
-    @OneToMany(mappedBy = "id_train")
+    @OneToMany(mappedBy = "train", fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SELECT)
     private List<Stop> stops;
 
-    @OneToMany(mappedBy = "id_train")
+    @OneToMany(mappedBy = "train", fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SELECT)
     private List<Seat> seats;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -62,5 +66,16 @@ public class Train {
 
     public void setSeats(List<Seat> seats) {
         this.seats = seats;
+    }
+
+    @Override
+    public String toString() {
+        return "Train{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", type='" + type + '\'' +
+            ", stops=" + stops +
+            ", seats=" + seats +
+            '}';
     }
 }
