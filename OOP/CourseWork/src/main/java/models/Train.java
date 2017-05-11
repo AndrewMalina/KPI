@@ -2,7 +2,6 @@ package models;
 
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -19,11 +18,11 @@ public class Train {
     @Column(name = "type_train")
     private String type;
 
-    @OneToMany(targetEntity = Stop.class, mappedBy = "train_stops")
-    private List<Stop> stops = new ArrayList<Stop>();
+    @OneToMany(mappedBy = "id_train")
+    private List<Stop> stops;
 
-    @OneToMany(targetEntity = Seat.class ,mappedBy = "train_seats")
-    private List<Seat> seats = new ArrayList<Seat>();
+    @OneToMany(mappedBy = "id_train")
+    private List<Seat> seats;
 
     public String getId() {
         return id;

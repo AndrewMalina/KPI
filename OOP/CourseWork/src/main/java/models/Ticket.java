@@ -6,9 +6,13 @@ import javax.persistence.*;
 @Table(name = "tickets")
 public class Ticket {
     @Id
-    @ManyToOne
-    @JoinColumn(name = "")
-    private Seat seat = new Seat();
+    @GeneratedValue
+    @Column(name = "id")
+    private int id;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_train")
+    private Seat seat;
 
     @Column(name = "start_ticket")
     private int start;
@@ -82,5 +86,18 @@ public class Ticket {
 
     public void setDistance(int distance) {
         this.distance = distance;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 }
