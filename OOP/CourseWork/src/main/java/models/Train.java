@@ -1,11 +1,13 @@
 package models;
 
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,13 +22,21 @@ public class Train {
 
     private String type;
 
-    @OneToMany(mappedBy = "train", fetch = FetchType.EAGER)
-    @Fetch(FetchMode.SELECT)
-    private List<Stop> stops;
+    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Stop> stops = new ArrayList<>();
 
-    @OneToMany(mappedBy = "train", fetch = FetchType.EAGER)
-    @Fetch(FetchMode.SELECT)
-    private List<Seat> seats;
+    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Seat> seats = new ArrayList<>();
+
+    public void addSeat(Seat s) {
+        seats.add(s);
+        s.setTrain(this);
+    }
+
+    public void addStop(Stop s) {
+        stops.add(s);
+        s.setTrain(this);
+    }
 
     public Integer getId() {
         return id;

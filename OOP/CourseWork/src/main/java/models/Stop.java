@@ -59,7 +59,7 @@ public class Stop {
             "id=" + id +
             ", city=" + city +
             ", date=" + date +
-            ", train=" + train +
+            ", train=" + train.getName() +
             '}';
     }
 }

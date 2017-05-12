@@ -6,6 +6,7 @@ import javax.persistence.*;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,8 +25,13 @@ public class Seat {
 
     private int number;
 
-    @OneToMany(mappedBy = "seat", cascade = CascadeType.ALL)
-    private List<Reservation> reservations;
+    @OneToMany(mappedBy = "seat", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Reservation> reservations = new ArrayList<>();
+
+    public void addReservation(Reservation r) {
+        reservations.add(r);
+        r.setSeat(this);
+    }
 
     public Integer getId() {
         return id;
@@ -71,7 +77,7 @@ public class Seat {
     public String toString() {
         return "Seat{" +
             "id=" + id +
-            ", train=" + train +
+            ", train=" + train.getName() +
             ", carriage=" + carriage +
             ", number=" + number +
             ", reservations=" + reservations +

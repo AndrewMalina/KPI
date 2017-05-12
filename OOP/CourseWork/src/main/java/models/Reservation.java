@@ -54,7 +54,7 @@ public class Reservation {
     public String toString() {
         return "Reservation{" +
             "id=" + id +
-            ", seat=" + seat +
+            ", seat=" + seat.getTrain().getName() + "/" + seat.getCarriage() + "/" + seat.getNumber() +
             ", start=" + start +
             ", end=" + end +
             '}';

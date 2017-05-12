@@ -1,43 +1,38 @@
 import models.Seat;
 import models.Train;
-import org.hibernate.HibernateException;
-import org.hibernate.SessionFactory;
-import org.hibernate.Session;
-import org.hibernate.Query;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.metadata.ClassMetadata;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
+import org.hibernate.criterion.Restrictions;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
-import java.util.Arrays;
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaQuery;
 import java.util.Collections;
-import java.util.Map;
+import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         Train t = new Train();
         t.setName("Test Train");
+
         Seat s = new Seat();
-        s.setNumber(4);
-        s.setCarriage(5);
+        s.setTrain(t);
+        s.setCarriage(4);
+        s.setNumber(34);
+
+        t.addSeat(s);
+
 
         EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
         em.getTransaction().begin();
         em.persist(t);
         em.getTransaction().commit();
-        em.close();
 
-        em = PersistenceManager.INSTANCE.getEntityManager();
-        Train train = em.find(Train.class, 1);
-        s.setTrain(train);
-        em.persist(s);
-        em.close();
 
-        em = PersistenceManager.INSTANCE.getEntityManager();
-        train = em.find(Train.class, 1);
+        Query query = em.createQuery("from Train where name = :name");
+        query.setParameter("name", "Test Train");
+        List resultList = query.getResultList();
+        Train train = (Train) resultList.get(0);
 
         System.out.println(train);
         em.close();
