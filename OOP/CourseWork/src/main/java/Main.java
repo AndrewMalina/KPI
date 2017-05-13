@@ -1,27 +1,25 @@
 import models.Seat;
 import models.Train;
-import org.hibernate.criterion.Restrictions;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaQuery;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
-
     public static void main(String[] args) {
         Train t = new Train();
-        t.setName("Test Train");
+        t.setName("");
+        t.setType("Day");
+        for (int i = 1; i <= 2; i++) {
+            for (int j = 1; j <= 20; j++) {
+                Seat s = new Seat();
+                s.setTrain(t);
+                s.setCarriage(i);
+                s.setNumber(j);
 
-        Seat s = new Seat();
-        s.setTrain(t);
-        s.setCarriage(4);
-        s.setNumber(34);
-
-        t.addSeat(s);
-
-
+                t.addSeat(s);
+            }
+        }
         EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
         em.getTransaction().begin();
