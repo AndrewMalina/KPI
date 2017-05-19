@@ -1,38 +1,24 @@
-import models.Seat;
-import models.Train;
+import manager.PersistenceManager;
+import models.City;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Train t = new Train();
-        t.setName("");
-        t.setType("Day");
-        for (int i = 1; i <= 2; i++) {
-            for (int j = 1; j <= 20; j++) {
-                Seat s = new Seat();
-                s.setTrain(t);
-                s.setCarriage(i);
-                s.setNumber(j);
-
-                t.addSeat(s);
-            }
-        }
         EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+        String[] cityString = new String[]{"Ужгород", "Івано Франківськ", "Львів", "Луцьк", "Рівне",
+                "Тернопіль", "Чернівці", "Хмельницький", "Житомир", "Вінниця", "Одеса", "Київ",
+                "Черкаси", "Кіровоград", "Миколаїв", "Херсон", "Сімферопіль", "Чернігів", "Суми",
+                "Полтава", "Дніпро", "Запоріжжя", "Харків", "Донецьк", "Луганськ"};
 
-        em.getTransaction().begin();
-        em.persist(t);
-        em.getTransaction().commit();
-
-
-        Query query = em.createQuery("from Train where name = :name");
-        query.setParameter("name", "Test Train");
-        List resultList = query.getResultList();
-        Train train = (Train) resultList.get(0);
-
-        System.out.println(train);
+        City city;
+        for (int i =0 ; i <cityString.length;i++) {
+            city = new City();
+            city.setCityName(cityString[i]);
+            em.getTransaction().begin();
+            em.persist(city);
+            em.getTransaction().commit();
+        }
         em.close();
         PersistenceManager.INSTANCE.close();
     }
