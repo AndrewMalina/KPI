@@ -1,6 +1,7 @@
 package service;
 
 import manager.PersistenceManager;
+import models.City;
 import models.Train;
 
 import javax.persistence.EntityManager;
@@ -11,6 +12,24 @@ import java.util.List;
 
 public class DBTrainService extends AbstractTrainService{
 
+
+    List<City> getAllCity() {
+        EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
+
+
+        Query query = em.createQuery("from City");
+        List resultList = query.getResultList();
+        List<City> city = new ArrayList<>();
+
+        for (Object train : resultList) {
+            city.add((City) city);
+        }
+
+        em.close();
+        PersistenceManager.INSTANCE.close();
+        return city;
+
+    }
 
     List<Train> getAllTrains() {
         EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
