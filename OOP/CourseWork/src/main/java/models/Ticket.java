@@ -18,7 +18,7 @@ public class Ticket {
 
     private int end;
 
-    private float price;
+    private double price;
 
     private String name;
 
@@ -50,11 +50,11 @@ public class Ticket {
         this.end = end;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
