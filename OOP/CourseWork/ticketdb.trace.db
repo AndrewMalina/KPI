@@ -1727,3 +1727,9 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/am18/D
 	at org.h2.mvstore.FileStore.open(FileStore.java:173)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
 	... 27 more
+2017-05-21 11:02:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE CITY (ID INT PRIMERY[*] KEY, NAME VARCHAR(255))"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE CITY (ID INT PRIMERY KEY, NAME VARCHAR(255)) [42001-195]
+2017-05-21 11:06:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE CITY (ID_CITY INT PRIMARY KEY AUTOINCREMENT[*], NAME_CITY VARCHAR(255))"; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE CITY (ID_CITY INT PRIMARY KEY AUTOINCREMENT, NAME_CITY VARCHAR(255)) [42001-195]
