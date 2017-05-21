@@ -19,15 +19,15 @@ public class DBTrainService extends AbstractTrainService{
 
         Query query = em.createQuery("from City");
         List resultList = query.getResultList();
-        List<City> city = new ArrayList<>();
+        List<City> cities = new ArrayList<>();
 
-        for (Object train : resultList) {
-            city.add((City) city);
+        for (Object city : resultList) {
+            cities.add((City) city);
         }
 
         em.close();
         PersistenceManager.INSTANCE.close();
-        return city;
+        return cities;
 
     }
 
