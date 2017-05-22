@@ -90,9 +90,6 @@ public class Ticket {
         this.id = id;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {
