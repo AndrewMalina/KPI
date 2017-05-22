@@ -8,22 +8,28 @@ import java.util.List;
 
 public abstract class AbstractTrainService implements TrainService {
     @Override
-    public List<Train> search(String start, String end) {
-
-        List<Train> allTrains = getAllTrains();
+    public List<Integer> searchCity(String start, String end){
         List<City> allCity = getAllCity();
-
-        int startInt = 0;
-        int endInt = 0;
+        List<Integer> startEnd = new ArrayList<>();
 
         for (City count : allCity) {
             if (start.equals(count.getId())) {
-                startInt = count.getId();
+                startEnd.add(count.getId());
             }
             if (end.equals(count.getId())) {
-                endInt = count.getId();
+                startEnd.add(count.getId());
             }
         }
+        return startEnd;
+    }
+    @Override
+    public List<Train> search(String start, String end) {
+
+        List<Train> allTrains = getAllTrains();
+
+        int startInt = searchCity(start,end).get(0);
+        int endInt = searchCity(start,end).get(1);
+
         boolean startBool;
         List<Train> resultTrains = new ArrayList<>();
         for (Train count : allTrains) {
@@ -37,7 +43,7 @@ public abstract class AbstractTrainService implements TrainService {
                 }
             }
         }
-        return allTrains;
+        return resultTrains;
     }
 
     abstract List<Train> getAllTrains();
