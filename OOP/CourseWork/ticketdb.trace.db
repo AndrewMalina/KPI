@@ -121,7 +121,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:30)
+	at sample.Main.main(sample.Main.java:30)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -171,7 +171,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:30)
+	at sample.Main.main(sample.Main.java:30)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 40 more
@@ -213,7 +213,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:32)
+	at sample.Main.main(sample.Main.java:32)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -265,7 +265,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:24)
+	at sample.Main.main(sample.Main.java:24)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -315,7 +315,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:24)
+	at sample.Main.main(sample.Main.java:24)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 40 more
@@ -357,7 +357,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:26)
+	at sample.Main.main(sample.Main.java:26)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -409,7 +409,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:24)
+	at sample.Main.main(sample.Main.java:24)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -459,7 +459,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:24)
+	at sample.Main.main(sample.Main.java:24)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 40 more
@@ -501,7 +501,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:26)
+	at sample.Main.main(sample.Main.java:26)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -553,7 +553,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:29)
+	at sample.Main.main(sample.Main.java:29)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -603,7 +603,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:29)
+	at sample.Main.main(sample.Main.java:29)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 40 more
@@ -645,7 +645,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:31)
+	at sample.Main.main(sample.Main.java:31)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -697,7 +697,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:29)
+	at sample.Main.main(sample.Main.java:29)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -747,7 +747,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:29)
+	at sample.Main.main(sample.Main.java:29)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 40 more
@@ -789,7 +789,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:31)
+	at sample.Main.main(sample.Main.java:31)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -841,7 +841,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:23)
+	at sample.Main.main(sample.Main.java:23)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -889,7 +889,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:23)
+	at sample.Main.main(sample.Main.java:23)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 38 more
@@ -931,7 +931,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:25)
+	at sample.Main.main(sample.Main.java:25)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -983,7 +983,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:23)
+	at sample.Main.main(sample.Main.java:23)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -1031,7 +1031,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:23)
+	at sample.Main.main(sample.Main.java:23)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 38 more
@@ -1073,7 +1073,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:25)
+	at sample.Main.main(sample.Main.java:25)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -1280,7 +1280,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:519)
+	at sample.Main.main(sample.Main.java:519)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -1328,7 +1328,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:519)
+	at sample.Main.main(sample.Main.java:519)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 38 more
@@ -1370,7 +1370,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:542)
+	at sample.Main.main(sample.Main.java:542)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
@@ -1413,7 +1413,7 @@ org.h2.message.DbException: Wrong user name or password [28000-195]
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:517)
+	at sample.Main.main(sample.Main.java:517)
 Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 33 more
@@ -1449,7 +1449,7 @@ org.h2.message.DbException: Wrong user name or password [28000-195]
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:517)
+	at sample.Main.main(sample.Main.java:517)
 Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 31 more
@@ -1477,7 +1477,7 @@ org.h2.message.DbException: Wrong user name or password [28000-195]
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:540)
+	at sample.Main.main(sample.Main.java:540)
 Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 23 more
@@ -1515,7 +1515,7 @@ org.h2.message.DbException: Wrong user name or password [28000-195]
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:517)
+	at sample.Main.main(sample.Main.java:517)
 Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 33 more
@@ -1551,7 +1551,7 @@ org.h2.message.DbException: Wrong user name or password [28000-195]
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:517)
+	at sample.Main.main(sample.Main.java:517)
 Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 31 more
@@ -1579,7 +1579,7 @@ org.h2.message.DbException: Wrong user name or password [28000-195]
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:540)
+	at sample.Main.main(sample.Main.java:540)
 Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 23 more
@@ -1626,7 +1626,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:517)
+	at sample.Main.main(sample.Main.java:517)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 42 more
@@ -1676,7 +1676,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
 	at PersistenceManager.<init>(PersistenceManager.java:12)
 	at PersistenceManager.<clinit>(PersistenceManager.java:7)
-	at Main.main(Main.java:517)
+	at sample.Main.main(sample.Main.java:517)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 40 more
@@ -1718,7 +1718,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.begin(AbstractTransactionImpl.java:160)
 	at org.hibernate.internal.SessionImpl.beginTransaction(SessionImpl.java:1263)
 	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:57)
-	at Main.main(Main.java:540)
+	at sample.Main.main(sample.Main.java:540)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/am18/Documents/Repository/KPI/OOP/CourseWork/ticketdb.mv.db [1.4.195/7]" [50000-195]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 32 more
