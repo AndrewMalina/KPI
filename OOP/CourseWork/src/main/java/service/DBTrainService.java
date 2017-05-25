@@ -1,13 +1,12 @@
 package service;
 
-import manager.PersistenceManager;
+import sample.PersistenceManager;
 import models.City;
 import models.Train;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class DBTrainService extends AbstractTrainService{
