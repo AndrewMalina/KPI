@@ -1,15 +1,15 @@
 package service;
 
-import sample.PersistenceManager;
 import models.City;
 import models.Train;
+import sample.PersistenceManager;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBTrainService extends AbstractTrainService{
+public class DBTrainService extends AbstractTrainService {
 
 
     List<City> getAllCity() {
@@ -46,6 +46,4 @@ public class DBTrainService extends AbstractTrainService{
         PersistenceManager.INSTANCE.close();
         return trains;
     }
-
-
 }
