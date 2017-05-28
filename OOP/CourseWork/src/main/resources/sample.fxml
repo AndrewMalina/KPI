@@ -11,7 +11,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.*?>
 
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <AnchorPane maxHeight="650.0" maxWidth="1160.0" minHeight="650.0" minWidth="1160.0" prefHeight="650.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <SplitPane dividerPositions="0.27469135802469136" layoutX="460.0" layoutY="34.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -23,7 +25,7 @@
                         <TextField fx:id="fieldTo" layoutX="82.0" layoutY="80.0" />
                         <Label layoutX="14.0" layoutY="44.0" text="Звідки" />
                         <Label layoutX="24.0" layoutY="83.0" text="Куди" />
-                        <DatePicker fx:id="fieldDate" layoutX="82.0" layoutY="122.0" prefHeight="26.0" prefWidth="171.0" />
+                        <DatePicker fx:id="fieldDate" layoutX="82.0" layoutY="122.0" prefHeight="26.0" prefWidth="171.0" onAction="#dateEvent" />
                         <Label layoutX="24.0" layoutY="124.0" text="Дата" />
                         <ImageView fitHeight="161.0" fitWidth="533.0" layoutX="600.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -40,15 +42,36 @@
                     <children>
                         <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <content>
-                                <TableView prefHeight="458.0" prefWidth="1140.0">
+                                <TableView fx:id="table" prefHeight="458.0" prefWidth="1140.0">
                                     <columns>
-                                        <TableColumn prefWidth="145.00003051757812" text="Номер потягу" />
-                                        <TableColumn prefWidth="211.0" text="Маршрут" />
-                                        <TableColumn prefWidth="104.0" text="Тип потягу" />
-                                        <TableColumn prefWidth="211.0" text="Ваш маршрут" />
-                                        <TableColumn prefWidth="182.0" text="Час відправлення" />
-                                        <TableColumn minWidth="0.0" prefWidth="172.0" text="Час прибуття" />
-                              <TableColumn minWidth="0.0" prefWidth="113.0" text="К-сть вагонів" />
+                                        <TableColumn minWidth="50.0" prefWidth="50.0" maxWidth="50.0" text="№" >
+                                            <cellValueFactory><PropertyValueFactory property="id" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="243.99996948242188" prefWidth="243.99996948242188" maxWidth="243.99996948242188" text="Train Route" >
+                                            <cellValueFactory><PropertyValueFactory property="name" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="118.0" prefWidth="118.0" maxWidth="118.0" text="Type Route" >
+                                            <cellValueFactory><PropertyValueFactory property="type" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="258.0" prefWidth="258.0" maxWidth="258.0" text="Your route" >
+                                            <cellValueFactory><PropertyValueFactory property="route" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="166.0" prefWidth="166.0" maxWidth="166.0" text="Departure time" >
+                                            <cellValueFactory><PropertyValueFactory property="departureTime" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="174.0" prefWidth="174.0" maxWidth="174.0" text="Arrival time" >
+                                            <cellValueFactory><PropertyValueFactory property="arrivalTime" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn minWidth="129.0" prefWidth="129.0" maxWidth="129.0" text="Number of cars" >
+                                            <cellValueFactory><PropertyValueFactory property="numberOfCars" />
+                                            </cellValueFactory>
+                                        </TableColumn>
                                     </columns>
                                 </TableView>
                             </content>
