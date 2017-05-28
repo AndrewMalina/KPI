@@ -11,8 +11,18 @@ import java.util.List;
 
 public class DBTrainService extends AbstractTrainService {
 
+    private static TrainService instance;
 
-    List<City> getAllCity() {
+    public static TrainService getInstance() {
+        if (instance == null) {
+            instance = new DBTrainService();
+        }
+        return instance;
+    }
+
+    public DBTrainService() { }
+
+    public List<City> getAllCity() {
         EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
 
@@ -25,7 +35,7 @@ public class DBTrainService extends AbstractTrainService {
         }
 
         em.close();
-        PersistenceManager.INSTANCE.close();
+
         return cities;
 
     }
@@ -43,7 +53,6 @@ public class DBTrainService extends AbstractTrainService {
         }
 
         em.close();
-        PersistenceManager.INSTANCE.close();
         return trains;
     }
 }

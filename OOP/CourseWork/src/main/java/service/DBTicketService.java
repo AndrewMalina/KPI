@@ -23,7 +23,5 @@ public class DBTicketService extends AbstractTicketService{
         em.getTransaction().commit();
 
         em.close();
-        PersistenceManager.INSTANCE.close();
-
     }
 }

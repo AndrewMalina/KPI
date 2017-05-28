@@ -22,10 +22,12 @@ public class Train {
 
     private String type;
 
-    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SELECT)
     private List<Stop> stops = new ArrayList<>();
 
-    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SELECT)
     private List<Seat> seats = new ArrayList<>();
 
     public void addSeat(Seat s) {
