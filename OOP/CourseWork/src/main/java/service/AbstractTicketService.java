@@ -1,43 +1,44 @@
 package service;
 
-import models.Ticket;
-import models.Train;
+import models.Stop;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractTicketService implements TicketService {
 
-    private int getDistance(Train train, int start, int end) {
+    public int getDistance(List<Stop> stop, int start, int end) {
         List<Integer> stops = new ArrayList<>();
 
         boolean inStopList = false;
-        for (int i = 0; i < train.getStops().size(); i++) {
-            if (train.getStops().get(i).getCity() == start) {
+
+        for (Stop stoping : stop) {
+            if (stoping.getCity() == start) {
                 inStopList = true;
             }
             if (inStopList) {
-                stops.add(train.getStops().get(i).getCity());
+                stops.add(stoping.getCity());
             }
-            if (train.getStops().get(i).getCity() == end) {
+            if (stoping.getCity() == end) {
                 break;
             }
         }
+
         int distance = 0;
         for (int i = 0; i < stops.size() - 1; i++) {
-            distance += arrStop(stops.get(i),stops.get(i+1));
+            distance += arrStop(stops.get(i)-1, stops.get(i + 1)-1);
         }
         return distance;
     }
+
     @Override
-    public double getPrice(Train train, int start, int end) {
-        int distance = getDistance(train, start, end);
+    public double getPrice(int distance, String type) {
         double price = 0;
-        switch (train.getType()){
-            case "Night":{
+        switch (type) {
+            case "Night": {
                 price = distance / 5;
             }
-            case "Day":{
+            case "Day": {
                 price = distance / 10;
             }
         }

@@ -1,5 +1,9 @@
 package sample;
 
+import models.Stop;
+
+import java.util.List;
+
 public class TrainTableRow {
     private Integer id;
     private String name;
@@ -8,8 +12,9 @@ public class TrainTableRow {
     private String departureTime;
     private String arrivalTime;
     private Integer numberOfCars;
+    private List<Stop> stopList;
 
-    public TrainTableRow(Integer id, String name, String type, String route, String departureTime, String arrivalTime, Integer numberOfCars) {
+    public TrainTableRow(Integer id, String name, String type, String route, String departureTime, String arrivalTime, Integer numberOfCars,List<Stop> stops) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -17,6 +22,7 @@ public class TrainTableRow {
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
         this.numberOfCars = numberOfCars;
+        this.stopList = stops;
     }
 
     public TrainTableRow() {
@@ -84,4 +90,13 @@ public class TrainTableRow {
     public void setNumberOfCars(Integer numberOfCars) {
         this.numberOfCars = numberOfCars;
     }
+
+    public List<Stop> getStopList() {
+        return stopList;
+    }
+
+    public void setStopList(List<Stop> stopList) {
+        this.stopList = stopList;
+    }
+
 }
