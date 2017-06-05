@@ -21,12 +21,12 @@ public class Ticket_Service extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Welcome.fxml"));
         Scene scene = new Scene(root, 1160, 650);
 
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Ticket Service");
+        primaryStage.setTitle("Welcome");
 
         primaryStage.show();
     }

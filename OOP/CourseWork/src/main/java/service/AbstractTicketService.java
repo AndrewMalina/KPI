@@ -37,9 +37,11 @@ public abstract class AbstractTicketService implements TicketService {
         switch (type) {
             case "Night": {
                 price = distance / 5;
+                break;
             }
             case "Day": {
                 price = distance / 10;
+                break;
             }
         }
         return price;
