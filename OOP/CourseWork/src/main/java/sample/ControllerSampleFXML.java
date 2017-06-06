@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
@@ -59,14 +58,14 @@ public class ControllerSampleFXML implements Initializable {
 
 
     public void buyEvent(ActionEvent event) {
-        if(buyTicket()){
+        if (buyTicket()) {
             buyButton.setStyle(null);
             buyButton.setTextFill(Paint.valueOf("BLACK"));
             buyButton.setDisable(true);
 
             searchButton.setStyle("-fx-background-color: #60a024; -fx-border-color: #5b9b21; -fx-border-radius: 4;");
             searchButton.setTextFill(Paint.valueOf("WHITE"));
-        }else {
+        } else {
             buyButton.setDisable(false);
         }
     }
@@ -138,30 +137,11 @@ public class ControllerSampleFXML implements Initializable {
 
         selectedTrain = table.getSelectionModel().getSelectedItem();
 
-        DBTicketService dbTicketService = new DBTicketService();
-
-        int start, end;
-        start = end = 0;
-
-        DBTrainService city = new DBTrainService();
-        List<City> cities = city.getAllCity();
-
-        for (City cityObject : cities) {
-            if (cityObject.getCityName().equalsIgnoreCase(fieldFrom.getText())) {
-                start = cityObject.getId();
-            }
-            if (cityObject.getCityName().equalsIgnoreCase(fieldTo.getText())) {
-                end = cityObject.getId();
-            }
-        }
-        if (check(dbTicketService,start, end, fieldCarriage.getText(), fieldPlace.getText(), selectedTrain.getId())) {
-            dbTicketService.buy(selectedTrain.getStopList(), start, end, fieldName.getText(), fieldSurname.getText(), fieldCarriage.getText(), fieldPlace.getText(), selectedTrain.getType(),
-                    selectedTrain.getId());
-            return true;
-        } else {
-            try{
-                Parent root  = FXMLLoader.load(getClass().getClassLoader().getResource("Error.fxml"));
-                Scene scene = new Scene(root, 350, 140);
+        if (Integer.parseInt(fieldCarriage.getText()) < 0 || Integer.parseInt(fieldCarriage.getText()) > 2 ||
+                Integer.parseInt(fieldPlace.getText()) < 0 || Integer.parseInt(fieldPlace.getText()) > 20) {
+            try {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ErrorInput.fxml"));
+                Scene scene = new Scene(root, 296, 106);
 
                 Stage primaryStage = new Stage();
                 primaryStage.setResizable(false);
@@ -170,12 +150,51 @@ public class ControllerSampleFXML implements Initializable {
 
                 primaryStage.show();
 
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("can`t load exception window");
             }
             return false;
-        }
+        } else {
 
+            DBTicketService dbTicketService = new DBTicketService();
+
+            int start, end;
+            start = end = 0;
+
+            DBTrainService city = new DBTrainService();
+            List<City> cities = city.getAllCity();
+
+            for (City cityObject : cities) {
+                if (cityObject.getCityName().equalsIgnoreCase(fieldFrom.getText())) {
+                    start = cityObject.getId();
+                }
+                if (cityObject.getCityName().equalsIgnoreCase(fieldTo.getText())) {
+                    end = cityObject.getId();
+                }
+            }
+            if (check(dbTicketService, start, end, fieldCarriage.getText(), fieldPlace.getText(), selectedTrain.getId())) {
+                dbTicketService.buy(selectedTrain.getStopList(), start, end, fieldName.getText(), fieldSurname.getText(), fieldCarriage.getText(), fieldPlace.getText(), selectedTrain.getType(),
+                        selectedTrain.getId());
+                return true;
+            } else {
+                try {
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Error.fxml"));
+                    Scene scene = new Scene(root, 300, 120);
+
+                    Stage primaryStage = new Stage();
+                    primaryStage.setResizable(false);
+                    primaryStage.setScene(scene);
+                    primaryStage.setTitle("Error");
+
+                    primaryStage.show();
+
+                } catch (Exception e) {
+                    System.out.println("can`t load exception window");
+                }
+                return false;
+            }
+
+        }
     }
 
     private boolean check(DBTicketService dbTicketService, int start, int end, String carriageText, String placeText, Integer id) {
