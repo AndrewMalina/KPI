@@ -3,7 +3,7 @@
 //****** Просте число – це натуральне число, яке ділиться на 1 та на себе.
 
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,12 +11,42 @@ public class Main {
     public static void main(String[] args) {
         int number = 0;
         number = input(number);
-        int arraySimpleNumber []= sieveOfEratosthena(number);
-        System.out.println(Arrays.toString(arraySimpleNumber));
+        ArrayList<Integer> obj = sieveOfEratosthena(number);
+        searchNumber(obj);
     }
 
-    private static int [] sieveOfEratosthena(int number) {
+    private static void searchNumber(ArrayList<Integer> arraySimpleNumber) {
+        int number = arraySimpleNumber.get(0);
+        String binaryIntInStrLast = Integer.toBinaryString(number);
+        int countLast = 0;
+        int countNext = 0;
+        for (int j = 0; j < binaryIntInStrLast.length(); j++) {
+            if (binaryIntInStrLast.charAt(j) == '0') {
+                countLast++;
+            }
+        }
+        for (Integer integer : arraySimpleNumber) {
+            String binaryIntInStr = Integer.toBinaryString(integer);
+            System.out.println(integer + " " + binaryIntInStr);
+            for (int j = 0; j < binaryIntInStr.length(); j++) {
+                if (binaryIntInStr.charAt(j) == '0') {
+                    countNext++;
+                }
+            }
+            if (countLast < countNext) {
+                number = integer;
+                countLast = countNext;
+                countNext = 0;
+            }else{
+                countNext = 0;
+            }
+        }
+        System.out.print(number);
+    }
+
+    private static ArrayList<Integer> sieveOfEratosthena(int number) {
         int[] full = new int[number];
+        ArrayList<Integer> obj = new ArrayList<>();
         for (int i = 2; i < number; i++) {
             full[i] = i;
         }
@@ -27,7 +57,12 @@ public class Main {
                 }
             }
         }
-        return full;
+        for (int i = 0; i < number; i++) {
+            if (full[i] != 0) {
+                obj.add(full[i]);
+            }
+        }
+        return obj;
     }
 
     private static int input(int number) {
@@ -46,7 +81,8 @@ public class Main {
             }
         } catch (InputMismatchException e) {
             System.out.println("Sorry u write not int number");
-            number = input(number);        }
+            number = input(number);
+        }
         return number;
     }
 }
