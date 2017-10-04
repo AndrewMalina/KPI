@@ -1,5 +1,7 @@
 package core.secondLab;
 
+import com.google.gson.Gson;
+
 public class Person {
     private int age;
     private String name;
@@ -48,5 +50,15 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';
+    }
+
+    public String serializePerson() {
+        Gson gson = new Gson();
+        return gson.toJson(this);
+    }
+
+    public Person deserializePerson(String s) {
+        Gson gson = new Gson();
+        return gson.fromJson(s, Person.class);
     }
 }
